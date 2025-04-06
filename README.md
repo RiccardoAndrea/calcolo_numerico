@@ -50,7 +50,7 @@ Le operazioni principali svolte nel progetto sono:
 
 ## Descrizione
 
-Questo progetto MATLAB esegue un'analisi numerica approfondita di una funzione definita dall'utente. L'obiettivo è esercitarsi con numerosi metodi numerici, inclusi:
+HW2 esegue un'analisi numerica approfondita di una funzione definita dall'utente. L'obiettivo è esercitarsi con numerosi metodi numerici, inclusi:
 
 - Calcolo degli zeri tramite `fzero` e metodi di bisezione, secanti e Newton.
 - Ricerca di minimi e massimi con `fminbnd`.
@@ -68,18 +68,9 @@ Questo progetto MATLAB esegue un'analisi numerica approfondita di una funzione d
 - MATLAB (versione R2020a o superiore consigliata)
 - Toolbox MATLAB per l'elaborazione grafica e il calcolo numerico
 
-## Istruzioni per l'Esecuzione
-
-1. Clona questo repository:
-   ```bash
-   git clone https://github.com/tuo-username/analisi-numerica-avanzata.git
 
 
 ## Installazione
 
 Per eseguire questo progetto, assicurati di avere MATLAB installato sul tuo sistema.
 
-### Passi per eseguire il progetto:
-1. Clona il repository:
-   ```bash
-   git clone https://github.com/TuoUsername/analisi-numerica-funzione.git
