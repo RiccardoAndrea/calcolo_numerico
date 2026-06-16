@@ -41,4 +41,4 @@ Questo modulo affronta le problematiche di modellazione di dataset discreti, app
 * **Toolbox** richiesti: Optimization Toolbox, Symbolic Math Toolbox.
 
 ## Note tecniche
-Il software è progettato per garantire modularità e portabilità, facilitando il testing di nuovi algoritmi iterativi attraverso un'architettura basata su funzioni callback e analisi comparativa delle performance.
+Il software è progettato per garantire modularità e portabilità, facilitando il testing di nuovi algoritmi iterativi
