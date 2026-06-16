@@ -28,9 +28,6 @@ Questo modulo affronta le problematiche di modellazione di dataset discreti, app
 * **Geometria Computazionale:** Ricostruzione vettoriale di poligoni complessi a partire da campionamento discreto di coordinate.
 * **Regressione e Data Fitting:** Analisi e trend-prediction su dataset reali tramite tecniche di minimi quadrati.
 * **Quadratura Numerica:** Sviluppo di solutori per l'integrazione definita con confronto di accuratezza tra formule composte:
-    * Rettangolare
-    * Trapezoidale
-    * Cavalieri-Simpson
 * **Analisi dell'Errore:** Studio sistematico del condizionamento e dei residui per validare l'affidabilità dei modelli.
 
 ---
