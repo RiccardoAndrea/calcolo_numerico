@@ -1,76 +1,44 @@
-# Analisi Numerica  - Progetto MATLAB
+# Scientific Computing & Numerical Analysis Suite (MATLAB)
 
-Questo progetto MATLAB è composto da due cartelle che chiamere HomeWork1 e Homework2
+Questa repository contiene una suite software in MATLAB progettata per l'implementazione, l'analisi e il benchmarking di algoritmi di calcolo scientifico e analisi numerica. Il progetto è strutturato in due moduli indipendenti, focalizzati sull'efficienza computazionale, la stabilità numerica e la convergenza degli algoritmi.
 
-# HomeWork1 
-esegue un'analisi numerica approfondita di una funzione definita dall'utente. Vengono utilizzati vari metodi numerici per risolvere problemi di zero-finding, ottimizzazione, analisi degli errori, condizionamento e calcolo di punti fissi. Di seguito sono descritti i passaggi principali del progetto.
+## Modulo 1: Solutori Non Lineari e Ottimizzazione
 
-## Descrizione
+Questo modulo implementa un'analisi computazionale avanzata di funzioni non lineari, focalizzandosi sullo studio della convergenza e del condizionamento numerico.
 
-Il progetto analizza la funzione definita come:
+**Target Function Analysis:**
+Il sistema analizza la funzione obiettivo:
+$$f(x) = e^{-x} \cdot \cos^2 \left(14x^2 - \pi^2\right) + \left(1 + 2x^2\right) \cdot \cos(2x) - 3$$
 
-$$
-\text{funrif}(x) = e^{-x} \cdot \cos^2 \left(14x^2 - \pi^2\right) + \left(1 + 2x^2\right) \cdot \cos(2x) - 3
-$$
+**Principali funzionalità implementate:**
+* **Visualizzazione e Characterization:** Analisi grafica tramite plotting adattivo con identificazione automatizzata di estremi relativi e zeri.
+* **Solutori Iterativi (Zero-Finding):** Benchmarking comparativo tra Metodo di Bisezione, Metodo delle Secanti e Metodo di Newton-Raphson.
+* **Analisi di Stabilità:** Calcolo rigoroso del residuo e dell'errore assoluto rispetto al solutore nativo `fzero`.
+* **Fixed-Point Analysis:** Verifica della convergenza verso punti stabili $f(x) = x$.
+* **Ottimizzazione Monodimensionale:** Ricerca locale di minimi e massimi utilizzando l'algoritmo di Fibonacci, Golden Section Search e validazione tramite derivata prima (`fminbnd`).
 
-Le operazioni principali svolte nel progetto sono:
+---
 
-1. **Definizione e Plot della Funzione**  
-   La funzione viene definita e tracciata su un intervallo specifico utilizzando `fplot`.
+## Modulo 2: Interpolazione, Regressione e Quadratura
 
-2. **Visualizzazione Dettagliata con Annotazioni**  
-   Vengono annotati gli estremi dell'intervallo, i punti di minimo e massimo e gli zeri della funzione.
+Questo modulo affronta le problematiche di modellazione di dataset discreti, approssimazione funzionale e integrazione numerica ad alta precisione.
 
-3. **Determinazione degli Zeri con `fzero`**  
-   Vengono calcolati con `fzero` gli zeri della funzione in vari intervalli.
+**Principali funzionalità implementate:**
+* **Interpolazione Avanzata:** Implementazione dell'interpolazione polinomiale (Vandermonde) e Spline cubiche. Utilizzo strategico dei Nodi di Chebyshev per la mitigazione del fenomeno di Runge.
+* **Geometria Computazionale:** Ricostruzione vettoriale di poligoni complessi a partire da campionamento discreto di coordinate.
+* **Regressione e Data Fitting:** Analisi e trend-prediction su dataset reali tramite tecniche di minimi quadrati.
+* **Quadratura Numerica:** Sviluppo di solutori per l'integrazione definita con confronto di accuratezza tra formule composte:
+    * Rettangolare
+    * Trapezoidale
+    * Cavalieri-Simpson
+* **Analisi dell'Errore:** Studio sistematico del condizionamento e dei residui per validare l'affidabilità dei modelli.
 
-4. **Approssimazioni delle Soluzioni tramite Metodi Numerici**  
-   Vengono utilizzati metodi numerici per approssimare gli zeri: Bisezione, Secanti e Newton.
+---
 
-5. **Analisi degli Errori e Residui**  
-   Per ciascun metodo, vengono calcolati l'errore assoluto e il residuo.
+## Requisiti di sistema
 
-6. **Ricerca di un Punto Fisso**  
-   Viene analizzata la funzione per trovare un punto fisso, cioè un punto tale che \( f(x) = x \).
+* **MATLAB** (R2020a o versioni successive)
+* **Toolbox** richiesti: Optimization Toolbox, Symbolic Math Toolbox.
 
-7. **Determinazione di Minimi e Massimi con `fminbnd`**  
-   La funzione `fminbnd` viene utilizzata per trovare i punti di minimo e massimo in intervalli specifici.
-
-8. **Verifica della Correttezza dei Punti Estremi**  
-   Si verifica che i punti di minimo e massimo siano anche zeri della derivata della funzione.
-
-9. **Approssimazione dei Punti Estremi con Metodi di Ricerca**  
-   Vengono utilizzati i metodi di ricerca Fibonacci e Golden Search per approssimare i minimi e massimi.
-
-10. **Confronto degli Errori delle Approssimazioni**  
-    Gli errori tra le approssimazioni e le soluzioni esatte vengono confrontati, con visualizzazione grafica.
-
-# HomeWork2
-
-
-## Descrizione
-
-HW2 esegue un'analisi numerica approfondita di una funzione definita dall'utente. L'obiettivo è esercitarsi con numerosi metodi numerici, inclusi:
-
-- Calcolo degli zeri tramite `fzero` e metodi di bisezione, secanti e Newton.
-- Ricerca di minimi e massimi con `fminbnd`.
-- Analisi degli errori assoluti e dei residui per confrontare le approssimazioni.
-- Studio del condizionamento della funzione nei punti critici.
-- Ricerca e analisi di un punto fisso (punto in cui \(f(x)=x\)).
-- Interpolazione polinomiale (utilizzando la matrice di Vandermonde) e interpolazione spline.
-- Utilizzo di nodi di Chebyshev per migliorare l'interpolazione.
-- Interpolazione di curve parametriche e ricostruzione di poligoni a partire da punti selezionati su un'immagine.
-- Approssimazione e fitting di dati reali (es. andamento del COVID-19) tramite minimi quadrati.
-- Calcolo numerico di integrali tramite metodi di quadratura (rettangolare, trapezoidale, Simpson) e confronto degli errori.
-
-## Requisiti
-
-- MATLAB (versione R2020a o superiore consigliata)
-- Toolbox MATLAB per l'elaborazione grafica e il calcolo numerico
-
-
-
-## Installazione
-
-Per eseguire questo progetto, assicurati di avere MATLAB installato sul tuo sistema.
-
+## Note tecniche
+Il software è progettato per garantire modularità e portabilità, facilitando il testing di nuovi algoritmi iterativi attraverso un'architettura basata su funzioni callback e analisi comparativa delle performance.
